@@ -59,6 +59,7 @@ void showCountryPicker({
   bool showSearch = true,
   bool useSafeArea = false,
   bool useRootNavigator = false,
+  BoxDecoration? boxDecoration,
 }) {
   assert(
     exclude == null || countryFilter == null,
@@ -79,5 +80,6 @@ void showCountryPicker({
     showSearch: showSearch,
     useSafeArea: useSafeArea,
     useRootNavigator: useRootNavigator,
+    boxDecoration: boxDecoration,
   );
 }

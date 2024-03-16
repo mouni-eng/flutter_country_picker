@@ -46,8 +46,12 @@ class MyApp extends StatelessWidget {
         const Locale('bg'),
         const Locale('ca'),
         const Locale('he'),
-        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'), // Generic Simplified Chinese 'zh_Hans'
-        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'), // Generic traditional Chinese 'zh_Hant'
+        const Locale.fromSubtags(
+            languageCode: 'zh',
+            scriptCode: 'Hans'), // Generic Simplified Chinese 'zh_Hans'
+        const Locale.fromSubtags(
+            languageCode: 'zh',
+            scriptCode: 'Hant'), // Generic traditional Chinese 'zh_Hant'
       ],
       localizationsDelegates: [
         CountryLocalizations.delegate,
@@ -80,6 +84,9 @@ class HomePage extends StatelessWidget {
               onSelect: (Country country) {
                 print('Select country: ${country.displayName}');
               },
+              boxDecoration: BoxDecoration(
+                color: Colors.red,
+              ),
               // Optional. Sets the theme for the country list picker.
               countryListTheme: CountryListThemeData(
                 // Optional. Sets the border radius for the bottomsheet.
